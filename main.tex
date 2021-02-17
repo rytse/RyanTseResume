@@ -1,0 +1,234 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.3, 10 May 2020) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 and academicons fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+\usepackage{multicol}
+
+% Avoid hyphenated words instead of line breaks
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\setmainfont{Rosario}
+\setsansfont{Source Sans Pro}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Ryan Tse}
+\tagline{Electrical Engineering and Math Student}
+%% You can add multiple photos on the left or right
+\photoR{2.8cm}{face_pfp}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{rytse@umd.edu}
+  \phone{(240) 643-0657}
+%   \mailaddress{Åddrésş, Street, 00000 Cóuntry}
+  \location{College Park, MD}
+  \homepage{rytse.github.io}
+%   \twitter{@twitterhandle}
+  \linkedin{rytse}
+  \github{rytse}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+  % \orcid{0000-0000-0000-0000}
+  %% You can add your own arbtrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.47}
+
+\begin{quote}
+Sophomore electrical engineering and math student at the University of Maryland interested in the intersections of math and engineering, particularly in control theory, machine learning, and signal processing. Founder and former president and RF instrument engineer of a high school CubeSat team. Currently working on radar signal processing at \href{https://nuro.ai/}{Nuro}, a self-driving delivery vehicle startup.
+\end{quote}
+
+\vspace{0.25cm}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{Experience}
+
+\cvevent{Intern: Radar}{\href{https://nuro.ai/}{Nuro}}{June 2020 -- January 2021}{Remote}
+% \begin{itemize}
+Developing, simulating, and implementing digital signal processing algorithms for radars on self-driving delivery vehicles.
+% \end{itemize}
+
+\divider
+
+\cvevent{Intern: Communications, Localization}{\href{https://www.i-a-i.com/}{Intelligent Automation Incorporated}}{June 2019 -- August 2019}{Rockville, MD}
+Assisted in the hardware implementation of a bursty space-time continuous phase modulation receiver by analyzing quantization error. Assisted in developing indoor positioning system technology by modifying tracking filters to include IMU data.
+
+\divider
+
+\cvevent{Intern: Communications}{\href{https://www.nrl.navy.mil/Our-Work/Areas-of-Research/Spacecraft-Engineering/}{Naval Research Laboratory}}{May 2018 -- August 2018}{Washington, DC}
+Developed an efficient bursty satellite ranging protocol in GNURadio. Applied control loops to correct for channel impairments and implemented packet protocols.
+
+\divider
+
+\cvevent{Intern: Localization}{\href{https://www.nrl.navy.mil/Our-Work/Facilities/Laboratory-for-Autonomous-Systems-Research/}{Naval Research Laboratory}}{June 2017 -- August 2017}{Washington, DC}
+Researched deep learning-based approaches to vehicle trilateration, working with regression models and reinforcement learning agents. Author of Publication [1].
+
+\divider
+
+\cvevent{Team Founder, President, and RF Payload Engineer}{\href{https://www.blair3sat.com/}{blair3sat}}{2017 – 2019}{Rockville, MD}
+Developing a CubeSat to measure 3D ionospheric charge density profiles by receiving ground-based ionospheric sounders from space. Performing DSP for the instrument and leading the team in spacecraft engineering and fund seeking in an executive capacity. Secured \$6,000 of funding and two corporate partnerships in 6 months. Author of Publication [2].
+
+\switchcolumn
+
+\cvsection{Education}
+\cvevent{Undergraduate in Electrical Engineering, Mathematics}{University of Maryland}{Aug 2019 -- Present}{}
+
+\vspace{-0.5cm}
+
+\setlength\columnsep{7pt}
+\begin{multicols}{2}
+
+    \textbf{Select Completed Courses:}
+    \vspace{0.375cm}
+    \begin{tightemize}
+        \item \href{https://www-math.umd.edu/undergraduate/departmental-course-pages/offered-courses/372-math-240-introduction-to-linear-algebra.html}{Linear Algebra}
+        \item \href{https://www-math.umd.edu/undergraduate/departmental-course-pages/offered-courses/373-math-241-calculus-iii.html}{Multivariable Calculus}
+        \item \href{https://www-math.umd.edu/undergraduate/departmental-course-pages/offered-courses/376-math-246-differential-equations-for-engineers.html}{Differential Equations}
+        \item \href{https://www-math.umd.edu/undergraduate/departmental-course-pages/offered-courses/414-stat-410-introduction-to-probability-theory.html}{Probability Theory}
+        \item \href{https://www-math.umd.edu/undergraduate/departmental-course-pages/offered-courses/387-math-410-advanced-calculus-i.html}{Advanced Calculus}
+        \item \href{https://www-math.umd.edu/undergraduate/departmental-course-pages/offered-courses/404-math-462-partial-differential-equations-for-scientists-and-engineers.html}{Partial Differential Equations}
+        \item \href{https://www-math.umd.edu/undergraduate/departmental-course-pages/offered-courses/398-math-437-differential-forms-and-their-applications.html}{Differential Forms}
+        
+        \item \href{https://umdphysics.umd.edu/academics/courses/966-physics-270-electrodynamics-light-relativity-modern-physics.html}{Electrodynamics and Modern Physics}
+    
+        % \item Electric Circuits
+        % \item Digital Logic Design
+        % \item Engineering Probability    
+        % \item Elements of Discrete Signal Analysis
+        \item \href{https://ece.umd.edu/course-schedule/course/ENEE322}{Signals and Systems Theory}
+    \end{tightemize}
+    
+    \columnbreak
+    
+    \textbf{Select Courses In Progress:}
+    \vspace{0.375cm}
+    \begin{tightemize}
+        \item \href{https://ece.umd.edu/course-schedule/course/ENEE469O}{Optimization for Control}
+        \item \href{https://ece.umd.edu/course-schedule/course/ENEE350}{Computer Organization}
+        \item \href{https://ece.umd.edu/course-schedule/course/ENEE313H}{Device Physics}
+        \item \href{https://ece.umd.edu/course-schedule/course/ENEE245}{Digital Circuits and Systems Laboratory}
+        \item \href{https://ece.umd.edu/course-schedule/course/ENEE303}{Analog and Digital Electronics}
+    \end{tightemize}
+
+\end{multicols}
+
+% \vspace{0.25cm}
+
+\vspace{-0.375cm}
+
+\cvsection{Tools}
+
+\textit{Experienced:}
+
+\vspace{0.125cm}
+
+\cvtag{Python} \cvtag{C} \cvtag{Matlab} \cvtag{Java} \cvtag{Git} \cvtag{Linux} \\
+
+\divider
+
+\textit{Familiar:}
+
+\vspace{0.125cm}
+
+\cvtag{C++} \cvtag{Julia} \cvtag{R} \cvtag{Tensorflow} \cvtag{Keras} \cvtag{OpenCV} \cvtag{OpenAI Gym} \cvtag{\LaTeX} \cvtag{Rust} \\
+
+\divider
+
+\textit{Novice:}
+
+\vspace{0.125cm}
+
+\cvtag{Verilog} \cvtag{ROS} \cvtag{AWS} \cvtag{GCP} \cvtag{JS/HTML/CSS}
+
+\cvsection{Publications}
+
+\vspace{-0.75cm}
+
+\begin{thebibliography}{2}
+\bibitem{lps} 
+D. Lofaro, C. Taylor, R. Tse, and D. Sofge, “Wearable Interactive Display for the Local Positioning System (LPS),” In 19th ACM International Conference on Multimodal Interaction (ICMI 2017) Demonstration Session, ACM, 2017.
+
+\bibitem{sirvlas}
+R. Tse, L. Cui, P. Kim, S. Swain, B. Cohen, and G. Das. “Space-based Ionosonde Receiver and Visible Limb-viewing Airglow Sensor (SIRVLAS): A CubeSat Instrument Suite for Enhanced Ionospheric Charge Density Measurements,” Proceedings of the AIAA/USU Conference on Small Satellites, SSC19-WP2-14.
+ 
+\end{thebibliography}
+
+\end{paracol}
+
+\end{document}
