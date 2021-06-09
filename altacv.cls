@@ -296,11 +296,11 @@
 
 % v1.1.4: fixes inconsistent font size
 \newcommand{\cvevent}[4]{%
-  {\normalsize\color{emphasis}#1\par}
-  \smallskip\normalsize
   \ifstrequal{#2}{}{}{
   \textbf{\color{accent}#2}\par
   \smallskip}
+  \smallskip\normalsize
+  {\normalsize\color{emphasis}#1\par}
   \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faCalendar~#3}}}%
   \ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\faMapMarker~#4}}}\par
   \medskip\normalsize
@@ -392,10 +392,10 @@
 \newenvironment{cvcolumn}[1]{\begin{minipage}[t]{#1}\raggedright}{\end{minipage}}
 
 \RequirePackage[style=apa6,sorting=ydnt]{biblatex}
-%% For removing numbering entirely when using a numeric style
-% \setlength{\bibhang}{1em}
-% \DeclareFieldFormat{labelnumberwidth}{\makebox[\bibhang][l]{\itemmarker}}
-% \setlength{\biblabelsep}{0pt}
+% For removing numbering entirely when using a numeric style
+\setlength{\bibhang}{1em}
+\DeclareFieldFormat{labelnumberwidth}{\makebox[\bibhang][l]{\itemmarker}}
+\setlength{\biblabelsep}{0pt}
 \defbibheading{pubtype}{\cvsubsection{#1}}
 \renewcommand{\bibsetup}{\vspace*{-\baselineskip}}
 \setlength{\bibhang}{1em}

@@ -33,6 +33,8 @@
 \usepackage{paracol}
 \usepackage{multicol}
 
+% \usepackage[backend=bibtex,style=verbose-trad2]{biblatex}
+
 % Avoid hyphenated words instead of line breaks
 \tolerance=1
 \emergencystretch=\maxdimen
@@ -71,7 +73,7 @@
 \renewcommand{\ratingmarker}{\faCircle}
 
 %% sample.bib contains your publications
-\addbibresource{sample.bib}
+% \addbibresource{sample.bib}
 
 \begin{document}
 \name{Ryan Tse}
@@ -109,7 +111,7 @@
 \columnratio{0.47}
 
 \begin{quote}
-Sophomore electrical engineering and math student at the University of Maryland interested in the intersections of math and engineering, particularly in control theory, machine learning, and signal processing. Founder and former president and RF instrument engineer of a high school CubeSat team. Currently working on radar signal processing at \href{https://nuro.ai/}{Nuro}, a self-driving delivery vehicle startup.
+Electrical engineering and math student interested in novel applications of ``pure'' math to engineering problems, particularly in control theory, machine learning, and digital signal processing. Currently working on radar digital signal processing at \href{https://nuro.ai/}{Nuro}, a self-driving delivery vehicle startup. Planning to complete undergraduate studies in Spring 2022.
 \end{quote}
 
 \vspace{0.25cm}
@@ -119,41 +121,43 @@ Sophomore electrical engineering and math student at the University of Maryland 
 \begin{paracol}{2}
 \cvsection{Experience}
 
-\cvevent{Intern: Radar}{\href{https://nuro.ai/}{Nuro}}{June 2020 -- January 2021}{Remote}
+\cvevent{Intern (Radar)}{\href{https://nuro.ai/}{Nuro}}{June 2020 -- January 2021}{Mountain View, CA}
 % \begin{itemize}
-Developing, simulating, and implementing digital signal processing algorithms for radars on self-driving delivery vehicles.
+Developing, simulating, and implementing digital signal processing algorithms for radars on self-driving delivery vehicles. Returning for Summer 2021.
 % \end{itemize}
 
 \divider
 
-\cvevent{Intern: Communications, Localization}{\href{https://www.i-a-i.com/}{Intelligent Automation Incorporated}}{June 2019 -- August 2019}{Rockville, MD}
+\cvevent{Intern (Communications, Localization)}{\href{https://www.i-a-i.com/}{Intelligent Automation Incorporated}}{June 2019 -- August 2019}{Rockville, MD}
 Assisted in the hardware implementation of a bursty space-time continuous phase modulation receiver by analyzing quantization error. Assisted in developing indoor positioning system technology by modifying tracking filters to include IMU data.
 
 \divider
 
-\cvevent{Intern: Communications}{\href{https://www.nrl.navy.mil/Our-Work/Areas-of-Research/Spacecraft-Engineering/}{Naval Research Laboratory}}{May 2018 -- August 2018}{Washington, DC}
+\cvevent{Intern (Communications)}{\href{https://www.nrl.navy.mil/Our-Work/Areas-of-Research/Spacecraft-Engineering/}{Naval Research Laboratory}}{May 2018 -- August 2018}{Washington, DC}
 Developed an efficient bursty satellite ranging protocol in GNURadio. Applied control loops to correct for channel impairments and implemented packet protocols.
 
 \divider
 
-\cvevent{Intern: Localization}{\href{https://www.nrl.navy.mil/Our-Work/Facilities/Laboratory-for-Autonomous-Systems-Research/}{Naval Research Laboratory}}{June 2017 -- August 2017}{Washington, DC}
-Researched deep learning-based approaches to vehicle trilateration, working with regression models and reinforcement learning agents. Author of Publication [1].
+\cvevent{Intern (Localization)}{\href{https://www.nrl.navy.mil/Our-Work/Facilities/Laboratory-for-Autonomous-Systems-Research/}{Naval Research Laboratory}}{June 2017 -- August 2017}{Washington, DC}
+Researched deep learning-based approaches to vehicle trilateration, working with regression models and reinforcement learning agents. Co-wrote Publication [1].
 
 \divider
 
 \cvevent{Team Founder, President, and RF Payload Engineer}{\href{https://www.blair3sat.com/}{blair3sat}}{2017 – 2019}{Rockville, MD}
-Developing a CubeSat to measure 3D ionospheric charge density profiles by receiving ground-based ionospheric sounders from space. Performing DSP for the instrument and leading the team in spacecraft engineering and fund seeking in an executive capacity. Secured \$6,000 of funding and two corporate partnerships in 6 months. Author of Publication [2].
+Developed a CubeSat to measure 3D ionospheric charge density profiles by receiving ground-based ionospheric sounders from space. Designed DSP algorithms for the instrument and lead the team in spacecraft engineering and fund seeking in an executive capacity. Secured \$6,000 of funding and two corporate partnerships in 6 months. Co-wrote Publication [2].
 
 \switchcolumn
 
 \cvsection{Education}
-\cvevent{Undergraduate in Electrical Engineering, Mathematics}{University of Maryland}{Aug 2019 -- Present}{}
+\cvevent{Combined B.S./M.S. in Electrical Engineering \\ B.S. in Mathematics}{University of Maryland}{Aug 2019 -- Present}{}
 
 \vspace{-0.5cm}
 
 \setlength\columnsep{7pt}
 \begin{multicols}{2}
 
+    % \vspace{-0.375cm}
+    
     \textbf{Select Completed Courses:}
     \vspace{0.375cm}
     \begin{tightemize}
@@ -164,14 +168,10 @@ Developing a CubeSat to measure 3D ionospheric charge density profiles by receiv
         \item \href{https://www-math.umd.edu/undergraduate/departmental-course-pages/offered-courses/387-math-410-advanced-calculus-i.html}{Advanced Calculus}
         \item \href{https://www-math.umd.edu/undergraduate/departmental-course-pages/offered-courses/404-math-462-partial-differential-equations-for-scientists-and-engineers.html}{Partial Differential Equations}
         \item \href{https://www-math.umd.edu/undergraduate/departmental-course-pages/offered-courses/398-math-437-differential-forms-and-their-applications.html}{Differential Forms}
-        
         \item \href{https://umdphysics.umd.edu/academics/courses/966-physics-270-electrodynamics-light-relativity-modern-physics.html}{Electrodynamics and Modern Physics}
-    
-        % \item Electric Circuits
-        % \item Digital Logic Design
-        % \item Engineering Probability    
-        % \item Elements of Discrete Signal Analysis
+        \item \href{https://ece.umd.edu/course-schedule/course/ENEE244}{Digital Logic Design}
         \item \href{https://ece.umd.edu/course-schedule/course/ENEE322}{Signals and Systems Theory}
+        \item \href{https://ece.umd.edu/course-schedule/course/ENEE324}{Engineering Probability}
     \end{tightemize}
     
     \columnbreak
@@ -182,15 +182,45 @@ Developing a CubeSat to measure 3D ionospheric charge density profiles by receiv
         \item \href{https://ece.umd.edu/course-schedule/course/ENEE469O}{Optimization for Control}
         \item \href{https://ece.umd.edu/course-schedule/course/ENEE350}{Computer Organization}
         \item \href{https://ece.umd.edu/course-schedule/course/ENEE313H}{Device Physics}
-        \item \href{https://ece.umd.edu/course-schedule/course/ENEE245}{Digital Circuits and Systems Laboratory}
+        \item \href{https://ece.umd.edu/course-schedule/course/ENEE245}{Digital Circuits and Systems}
         \item \href{https://ece.umd.edu/course-schedule/course/ENEE303}{Analog and Digital Electronics}
     \end{tightemize}
-
+    
+    \vspace{0.375cm}
+    
+    \textbf{Select Upcoming Courses:}
+    \vspace{0.375cm}
+    \begin{tightemize}
+        \item \href{https://user.eng.umd.edu/~abarg/620/}{Random Processes}
+        \item \href{https://ece.umd.edu/course-schedule/course/ENEE460}{Control Systems}
+        \item \href{https://ece.umd.edu/course-schedule/course/ENEE420}{Communications Systems}
+        \item \href{https://www-math.umd.edu/undergraduate/departmental-course-pages/offered-courses/420-amsc-460-computational-methods.html}{Computational Methods}
+        \item \href{https://www-math.umd.edu/offered-courses/383-math-403-introduction-to-abstract-algebra.html}{Abstract Algebra}
+    \end{tightemize}
 \end{multicols}
 
+% \textbf{Select Upcoming Courses:}
+% \vspace{-0.5cm}
+% \setlength\columnsep{7pt}
+% \begin{multicols}{2}
+
+%     \begin{tightemize}
+%         \item \href{https://www-math.umd.edu/undergraduate/departmental-course-pages/offered-courses/420-amsc-460-computational-methods.html}{Computational Methods}
+%         \item \href{https://www-math.umd.edu/offered-courses/383-math-403-introduction-to-abstract-algebra.html}{Abstract Algebra}
+%     \end{tightemize}
+    
+%     \columnbreak
+    
+%     \begin{tightemize}
+%         \item \href{https://user.eng.umd.edu/~abarg/620/}{Random Processes}
+%         \item \href{https://ece.umd.edu/course-schedule/course/ENEE460}{Control Systems}
+%         \item \href{https://ece.umd.edu/course-schedule/course/ENEE420}{Communications Systems}
+%     \end{tightemize}
+    
+% \end{multicols}
 % \vspace{0.25cm}
 
-\vspace{-0.375cm}
+\vspace{-0.25cm}
 
 \cvsection{Tools}
 
@@ -206,7 +236,7 @@ Developing a CubeSat to measure 3D ionospheric charge density profiles by receiv
 
 \vspace{0.125cm}
 
-\cvtag{C++} \cvtag{Julia} \cvtag{R} \cvtag{Tensorflow} \cvtag{Keras} \cvtag{OpenCV} \cvtag{OpenAI Gym} \cvtag{\LaTeX} \cvtag{Rust} \\
+\cvtag{Verilog} \cvtag{C++}  \cvtag{Rust} \cvtag{Julia} \cvtag{R} \cvtag{Tensorflow} \cvtag{Keras} \cvtag{OpenCV} \cvtag{OpenAI Gym} \cvtag{\LaTeX} \\
 
 \divider
 
@@ -214,19 +244,24 @@ Developing a CubeSat to measure 3D ionospheric charge density profiles by receiv
 
 \vspace{0.125cm}
 
-\cvtag{Verilog} \cvtag{ROS} \cvtag{AWS} \cvtag{GCP} \cvtag{JS/HTML/CSS}
+\cvtag{ROS} \cvtag{AWS} \cvtag{GCP} \cvtag{JS/HTML/CSS}
+
+\vspace{0.25cm}
+
+\renewcommand\refname{\vskip -1cm}
 
 \cvsection{Publications}
 
-\vspace{-0.75cm}
+\vspace{-0.25cm}
+
+\bibliographystyle{abbrv}
 
 \begin{thebibliography}{2}
-\bibitem{lps} 
+\bibitem{lps}
 D. Lofaro, C. Taylor, R. Tse, and D. Sofge, “Wearable Interactive Display for the Local Positioning System (LPS),” In 19th ACM International Conference on Multimodal Interaction (ICMI 2017) Demonstration Session, ACM, 2017.
 
 \bibitem{sirvlas}
 R. Tse, L. Cui, P. Kim, S. Swain, B. Cohen, and G. Das. “Space-based Ionosonde Receiver and Visible Limb-viewing Airglow Sensor (SIRVLAS): A CubeSat Instrument Suite for Enhanced Ionospheric Charge Density Measurements,” Proceedings of the AIAA/USU Conference on Small Satellites, SSC19-WP2-14.
- 
 \end{thebibliography}
 
 \end{paracol}
